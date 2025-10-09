@@ -50,4 +50,15 @@
             //FUNÇÃO DE REMOÇÃO
             //-------------------------------------------------------------------------
             //**
-             
+            //Remove um filme do array de dados e do elemento HTML na tela.
+             * @param {number} indice - A posição do filme no array 'catálogo'
+             * @param {HTMLElement} elementoDOM - O elemento <div> do filme a ser removido da tela
+             */ 
+            function removerFilme(indice,elementoDOM){
+                
+
+// A. REMOÇÃO DO ARRAY (Logica)
+// splice(indice, 1) remove 1 elemento a partir da posição indice.
+// Isso atualiza o array catalogo.
+catalogo.splice(indice, 1);
+// B. REMOÇÃO DO DOM (Visual) Π
