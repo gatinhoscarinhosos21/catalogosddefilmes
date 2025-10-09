@@ -55,10 +55,17 @@
              * @param {HTMLElement} elementoDOM - O elemento <div> do filme a ser removido da tela
              */ 
             function removerFilme(indice,elementoDOM){
-                
+
 
 // A. REMOÇÃO DO ARRAY (Logica)
 // splice(indice, 1) remove 1 elemento a partir da posição indice.
 // Isso atualiza o array catalogo.
 catalogo.splice(indice, 1);
 // B. REMOÇÃO DO DOM (Visual) Π
+
+
+//Opcional atualiza a mensagem da lista se estiver vazia
+if(catalogo.length===0) {
+    listaFilmesContainer.innerHTML = '<p>Nenhum Filme Cadastrado ainda. </p>';
+}
+ console.log 
