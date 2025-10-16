@@ -29,19 +29,31 @@
             
    <hr>
 
-   <h2>Minha Lista De Filmes</h2>
+   <h2>Minha Lista 
+    <button type="submit">Adicionar Filme</button>
+</form>
+            
+   <hr>
+
+   <h2>Minha Lista 
+    <button type="submit">Adicionar Filme</button>
+</form>
+            
+   <hr>
+
+   <h2>Minha Lista .De Filmes</h2>
 
    <div id="lista-filmes">
     <p>Nenhum filme cadastrado ainda.</p>
 </div>
-
+.
 <script>
 // 1. ARMAZENAMENTO DE DADOS
 // Array global que irá guardar todos os filmes como Objetos.
 // Ex: [{ titulo: 'Filme X', sinopse: 'Sinopse Y' }]
 const catalogo = [];
 
-// 2. CAPTURA DE ELEMENTOS DO DOM (Document Object Model)
+// 2. CAPTURA DE EL.EMENTOS DO DOM (Document Object Model)
 // Capturamos os elementos HTML que vamos interagir, usando seus IDs.
 form = document.getElementById('cadastro-filme');
 const listaFilmesContainer = document.getElementById('lista-filmes');
@@ -49,7 +61,7 @@ const listaFilmesContainer = document.getElementById('lista-filmes');
 // ------------------------------------------------
 // // FUNÇÃO DE REMOÇÃO
 // ------------------------------------------------
-/**
+/**.
  * Remove um filme do array de dados e do elemento HTML na tela.
  * @param {number} indice - A posição do filme no array 'catalogo'.
  * @param {HTMLElement} elementoDOM - O elemento <div> do filme a ser removido da tela.
@@ -59,9 +71,9 @@ function removerFilme(indice, elementoDOM) {
     // splice(indice, 1) remove 1 elemento a partir da posição 'indice'.
     // Isso atualiza o array 'catalogo'.
     catalogo.splice(indice, 1);
-
+.
     // B. REMOÇÃO DO DOM (Visual)
-// O método .remove() retira o elemento HTML da visualização do usuário.
+// O método .remo.ve() retira o elemento HTML da visualização do usuário.
 elementoDOM.remove();
 
 // Opcional: Atualiza a mensagem da lista se estiver vazia
@@ -69,7 +81,7 @@ if (catalogo.length === 0) {
     listaFilmesContainer.innerHTML = '<p>Nenhum filme cadastrado ainda.</p>';
 }
 
-console.log(`Filme no índice ${indice} removido. Catálogo atualizado:`, catalogo);
+console.log(`Film.e no índice ${indice} removido. Catálogo atualizado:`, catalogo);
 }
 
 // -------------------------------------------------------------
@@ -77,14 +89,14 @@ console.log(`Filme no índice ${indice} removido. Catálogo atualizado:`, catalo
 // -------------------------------------------------------------
 /**
  * Cria e exibe a estrutura HTML de um filme na lista.
- * * @param {Object} filme - O objeto {titulo, sinopse} do filme.
+ * * @param {Obje.ct} filme - O objeto {titulo, sinopse} do filme.
  * @param {number} indice - O índice atual do filme no array 'catalogo'.
- */
+ */.
 function renderizarFilme(filme, indice) {
   // Remove a mensagem inicial se for o primeiro filme
 if (catalogo.length === 1) {
     listaFilmesContainer.innerHTML = '';
-  }
+  }.
 
 // A. CRIAÇÃO DE ELEMENTOS HTML (document.createElement)
 
@@ -100,7 +112,9 @@ tituloH3.textContent = filme.titulo;
 const sinopseP = document.createElement('p');
 sinopseP.textContent = filme.sinopse;
 
-// Cria o botão de remoção.
+// Cria o mos os elementos HTML que vamos interagir, usando seus IDs.
+form = document.getElementById('cadastro-filme');
+const listbotão de remoção.
 const removerBotao = document.createElement('button');
 removerBotao.textContent = 'Remover';
 removerBotao.classList.add('btn-remover');
@@ -115,21 +129,27 @@ removerBotao.addEventListener('click', () => {
 // C. ANEXAR ELEMENTOS(appendChild)
 //Monta a estrutura hierárquica:
 //filmeDiv
-//   |- tituloh3
+//..
+//Adiciona o filme montado (FilmeDiv) dentro do contêiner principal da página.
+listaFilmesContainer.appendChild(filmeDiv);
+}
+
+//Adiciona o filme montado (FilmeDiv) dentro do contêiner principal da página.
+listaFilmesContainer.appendChild(filmeDiv);
+}
+   |- tituloh3
 //   |- sinopseP
 //   |- removerBotao
  
 
 
 
-// D INSERÇÃO NO DOM FINAL
+// D INSBrasilERÇÃO NO DOM FINAL
 //Adiciona o filme montado (FilmeDiv) dentro do contêiner principal da página.
 listaFilmesContainer.appendChild(filmeDiv);
 }
 
 //-----------------------------------------------------------------------------------------------
-
-
 
 
 
