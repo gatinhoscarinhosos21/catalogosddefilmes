@@ -1,44 +1,33 @@
- body {
-    font-family: Arial, sans-serif;
+body { 
+    font-family: arial, sans-serif;
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    background-color: darksalmon;
+    background-color: #f4f4f4;
 }
-
 h1, h2 {
-    color: honeydew;
+    color: #333;
 }
-
 form {
-    background-color: #fff;
+    background: #fff;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
-
 input[type="text"] {
     width: 100%;
-    padding: 5px 10px;
+    padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-textarea {
-    width: 100%;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 button {
@@ -50,59 +39,60 @@ button {
     cursor: pointer;
     transition: background-color 0.2s;
 }
-
 button:hover {
     background-color: #0056b3;
 }
 
-/* Estilos para os itens de filme */
+/* ----------------------------------------------------- */
+/* ESTILOS PARA A FASE 2: LISTA COM POSTER (Flexbox) */
+/* ----------------------------------------------------- */
+
+/* Contêiner do Filme: Organiza imagem e texto */
 .filme-item {
-    display: flex; /* Organiza lado a lado imagem e texto */
-    align-items: flex-start;
-    padding: 10px;
-    margin-bottom: 10px;
+    display: flex; /* Habilita o alinhamento lado a lado */
+    align-items: flex-start; /* Alinha o conteúdo ao  topo */
+
     border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.filme-item .btn-remover {
-    padding: 8px 12px;
-    margin-left: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f44336;
-    color: white;
-    cursor: pointer;
-}
-
-.filme-item .btn-remover:hover {
-    background-color: #d32f2f;
-}
-
-/* Estilo para o pôster do filme */
+/* Estilo do Pôster */
 .filme-poster {
     width: 100px;
     height: 150px;
     object-fit: cover;
-    margin-right: 15px;
+    margin-right: 15px; /* Espaço entre o pôster e o texto */
     border-radius: 4px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para as informações do filme */
+/* Estilo do Bloco de Informações */
 .filme-info {
     flex-grow: 1; /* Ocupa o espaço restante */
-    color: #555;
 }
-
-.filme-info h3 {
-    margin: 0;
+ .filme-info h3 {
+    margin-top: 0;
+    color: #007bff;
     font-size: 1.2em;
-}
+ }
 
-.filme-info p {
-    font-size: 0.9em;
-    color: #777;
-}
+ .filme-info p {
+    font-style: normal;
+    color: #555;
+    margin-bottom: 15px;
+ }
+
+  /* Botão Remover */
+ .filme-item .btn-remover {
+    background-color: #dc3545;
+    font-size: 0.8em;
+    padding: 5px 10px;
+ }
+ .filme-item .btn-remover:hover {
+    background-color: #c82333;
+ }
+
