@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎬 Catálogo de Filmes</title>
 
-    <!-- Fonte cursiva e ícone -->
+    <!-- Fonte cursiva -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2798/2798007.png">
 
     <!-- CSS externo -->
     <link rel="stylesheet" href="style.css">
@@ -20,13 +19,15 @@
 
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="🔍 Pesquise um filme...">
+            <button id="addMovieBtn">Adicionar Filmes</button>
         </div>
     </header>
 
     <main>
         <section class="catalogo" id="catalogo">
 
-            <!-- La La Land -->
+            <!-- Filmes iniciais -->
+
             <div class="filme" data-nome="la la land">
                 <img src="https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg" alt="La La Land">
                 <div class="filme-info">
@@ -34,14 +35,13 @@
                     <p>
                         Em meio ao caos e aos sonhos de Los Angeles, o pianista de jazz Sebastian e a aspirante a atriz Mia se encontram
                         por acaso, dando início a uma história de amor intensa e melancólica. Unidos pela paixão por suas carreiras,
-                        eles enfrentam o dilema entre o amor e as ambições pessoais. <strong>“La La Land”</strong> é um musical moderno,
-                        visualmente deslumbrante, que celebra o poder dos sonhos e o preço das escolhas que definem nossas vidas.
+                        eles enfrentam o dilema entre o amor e as ambições pessoais. “La La Land” é um musical moderno, visualmente
+                        deslumbrante, que celebra o poder dos sonhos e o preço das escolhas que definem nossas vidas.
                     </p>
                     <a href="https://www.youtube.com/watch?v=0pdqf4P9MB8" target="_blank">▶ Ver Trailer</a>
                 </div>
             </div>
 
-            <!-- Enrolados -->
             <div class="filme" data-nome="enrolados">
                 <img src="https://image.tmdb.org/t/p/w500/ym7Kst6a4uodryxqbGOxmewF235.jpg" alt="Enrolados">
                 <div class="filme-info">
@@ -50,28 +50,26 @@
                         Rapunzel passou toda a vida presa em uma torre, isolada do mundo por uma mulher que a fez acreditar ser sua mãe.
                         Quando um ladrão encantador chamado Flynn Rider invade seu esconderijo, os dois iniciam uma aventura repleta de humor,
                         ação e descobertas. Juntos, eles exploram o mundo exterior, enfrentam perigos e aprendem sobre coragem, amizade
-                        e a verdadeira liberdade. Uma história encantadora sobre encontrar o próprio caminho — e a luz interior.
+                        e a verdadeira liberdade.
                     </p>
                     <a href="https://www.youtube.com/watch?v=2f516ZLyC6U" target="_blank">▶ Ver Trailer</a>
                 </div>
             </div>
 
-            <!-- Oppenheimer -->
             <div class="filme" data-nome="oppenheimer">
                 <img src="https://image.tmdb.org/t/p/w500/baf9yw4mnNKV2UnZb93dhR2Vj6P.jpg" alt="Oppenheimer">
                 <div class="filme-info">
                     <h2>Oppenheimer</h2>
                     <p>
-                        Dirigido por Christopher Nolan, <strong>“Oppenheimer”</strong> é uma jornada épica pela mente de um homem
+                        Dirigido por Christopher Nolan, “Oppenheimer” é uma jornada épica pela mente de um homem
                         que mudou o curso da história. J. Robert Oppenheimer, o físico brilhante por trás do Projeto Manhattan,
                         enfrenta o peso moral de ter criado a arma mais destrutiva já concebida pela humanidade.
-                        Uma obra intensa e reflexiva sobre ciência, poder e responsabilidade — que mergulha no lado mais sombrio do progresso.
+                        Uma obra intensa e reflexiva sobre ciência, poder e responsabilidade.
                     </p>
                     <a href="https://www.youtube.com/watch?v=uYPbbksJxIg" target="_blank">▶ Ver Trailer</a>
                 </div>
             </div>
 
-            <!-- Barbie -->
             <div class="filme" data-nome="barbie">
                 <img src="https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg" alt="Barbie">
                 <div class="filme-info">
@@ -79,23 +77,20 @@
                     <p>
                         Em Barbieland, tudo é perfeito — até que Barbie começa a questionar o sentido de sua existência.
                         Ao embarcar no mundo real, ela descobre as complexidades da humanidade e o poder de ser imperfeita.
-                        Repleto de humor, crítica social e visuais vibrantes, <strong>“Barbie”</strong> é uma celebração da identidade,
-                        da autenticidade e da força feminina. Uma comédia inteligente que mistura sátira e emoção de forma surpreendente.
+                        Uma comédia inteligente que mistura sátira e emoção de forma surpreendente.
                     </p>
                     <a href="https://www.youtube.com/watch?v=pBk4NYhWNMM" target="_blank">▶ Ver Trailer</a>
                 </div>
             </div>
 
-            <!-- Duna Parte Dois -->
             <div class="filme" data-nome="duna parte dois">
                 <img src="https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg" alt="Duna Parte Dois">
                 <div class="filme-info">
                     <h2>Duna: Parte Dois</h2>
                     <p>
-                        Após a destruição de sua casa e família, Paul Atreides se une ao povo Fremen para buscar vingança e cumprir
-                        seu destino como o profetizado Messias. Em meio a traições políticas, batalhas épicas e segredos antigos,
-                        ele precisa decidir entre o amor e o poder. <strong>“Duna: Parte Dois”</strong> aprofunda o universo criado
-                        por Frank Herbert, combinando visual deslumbrante, trilha sonora imersiva e uma trama repleta de intrigas e destino.
+                        Após a destruição de sua casa e família, Paul Atreides se une ao povo Fremen para buscar vingança
+                        e cumprir seu destino como o profetizado Messias. Em meio a traições políticas, batalhas épicas e
+                        segredos antigos, ele precisa decidir entre o amor e o poder.
                     </p>
                     <a href="https://www.youtube.com/watch?v=U2Qp5pL3ovA" target="_blank">▶ Ver Trailer</a>
                 </div>
@@ -105,19 +100,53 @@
     </main>
 
     <footer>
-        <p>🎥 Desenvolvido com ❤️ por <strong>anocabanana</strong> — 2025</p>
+        <p>🎥 Desenvolvido com ❤️ por <strong>aninha</strong> — 2025</p>
     </footer>
 
+    <!-- ======= JavaScript ======= -->
     <script>
         const searchInput = document.getElementById('searchInput');
         const filmes = document.querySelectorAll('.filme');
+        const addMovieBtn = document.getElementById('addMovieBtn');
+        const catalogo = document.getElementById('catalogo');
 
+        // Pesquisa
         searchInput.addEventListener('keyup', () => {
             const termo = searchInput.value.toLowerCase();
             filmes.forEach(filme => {
                 const nome = filme.getAttribute('data-nome');
                 filme.style.display = nome.includes(termo) ? 'block' : 'none';
             });
+        });
+
+        // Adicionar filme dinamicamente
+        addMovieBtn.addEventListener('click', () => {
+            const titulo = prompt("Digite o título do filme:");
+            if (!titulo) return;
+
+            const sinopse = prompt("Digite a sinopse do filme:");
+            if (!sinopse) return;
+
+            const imagem = prompt("Cole o link da imagem do filme:");
+            if (!imagem) return;
+
+            const trailer = prompt("Cole o link do trailer do filme (YouTube):");
+            if (!trailer) return;
+
+            const filmeDiv = document.createElement('div');
+            filmeDiv.classList.add('filme');
+            filmeDiv.setAttribute('data-nome', titulo.toLowerCase());
+
+            filmeDiv.innerHTML = `
+                <img src="${imagem}" alt="${titulo}">
+                <div class="filme-info">
+                    <h2>${titulo}</h2>
+                    <p>${sinopse}</p>
+                    <a href="${trailer}" target="_blank">▶ Ver Trailer</a>
+                </div>
+            `;
+
+            catalogo.appendChild(filmeDiv);
         });
     </script>
 
