@@ -1,4 +1,119 @@
- /* ======== RODAPÉ ======== */
+/* ======== ESTILO GERAL ======== */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0f0f0f; /* fundo escuro neutro */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======== CABEÇALHO ======== */
+header {
+    text-align: center;
+    padding: 40px 10px;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #333;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5em;
+    color: #ffcc70;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #bbb;
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+/* ======== BARRA DE PESQUISA ======== */
+.search-bar {
+    text-align: center;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #222;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-bar input:focus {
+    box-shadow: 0 0 10px #ffcc70;
+}
+
+/* ======== CATÁLOGO ======== */
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinha à esquerda */
+    gap: 20px;
+    padding: 40px;
+}
+
+/* ======== FILMES ======== */
+.filme {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filme:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 204, 112, 0.3);
+}
+
+.filme img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 370px;
+    object-fit: cover;
+}
+
+.filme-info {
+    padding: 15px;
+}
+
+.filme h2 {
+    font-family: 'Great Vibes', cursive;
+    color: #ffcc70;
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.filme p {
+    color: #ccc;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.filme a {
+    display: inline-block;
+    color: #ffcc70;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 1px solid #ffcc70;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.filme a:hover {
+    background-color: #ffcc70;
+    color: #111;
+}
+
+/* ======== RODAPÉ ======== */
 footer {
     background-color: #111;
     text-align: center;
@@ -6,21 +121,4 @@ footer {
     color: #777;
     border-top: 1px solid #333;
     font-size: 0.9em;
-}
-
-/* ======== TRANSIÇÃO SUAVE AO CARREGAR ======== */
-.filme {
-    opacity: 0;
-    animation: fadeIn 0.8s ease forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
