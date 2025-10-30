@@ -1,193 +1,112 @@
  <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Filmes Dinâmico</title>
+    <title>🎬 Catálogo de Filmes</title>
 
+    <!-- Fonte cursiva e ícone -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2798/2798007.png">
+
+    <!-- Arquivo CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Catálogo de Filmes</h1>
-    
-    <form id="cadastro-filmes">
-        <h2>Adicionar Novos Filmes (BUSCA POR API)</h2>
-        <div>
-            <label for="titulo">Título do Filme:</label>
-            <input type="text" id="titulo" required>
+
+    <!-- ==========================
+         CABEÇALHO E PESQUISA
+    =========================== -->
+    <header>
+        <h1>🎞️ Catálogo de Filmes</h1>
+        <p class="subtitulo">Descubra histórias incríveis e mergulhe no mundo do cinema!</p>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="🔍 Pesquise um filme...">
         </div>
+    </header>
 
-        <div>
-            <label for="sinopse">Sinopse:</label>
-            <textarea id="sinopse" required></textarea>
-        </div>
-        <button type="submit">Adicionar Filme</button>
-    </form>
-    
-    <hr>
+    <!-- ==========================
+         SEÇÃO PRINCIPAL DO CATÁLOGO
+    =========================== -->
+    <main>
+        <section class="catalogo" id="catalogo">
 
-    <h2>Minha Lista de Filmes</h2>
+            <!-- Filme 1: La La Land -->
+            <div class="filme" data-nome="la la land">
+                <img src="https://m.media-amazon.com/images/I/71kZfVfT8SL._AC_UF894,1000_QL80_.jpg" alt="La La Land">
+                <div class="filme-info">
+                    <h2>La La Land</h2>
+                    <p>Um pianista de jazz e uma aspirante a atriz se apaixonam enquanto perseguem seus sonhos em Los Angeles.</p>
+                    <a href="https://www.youtube.com/watch?v=0pdqf4P9MB8" target="_blank">▶ Ver Trailer</a>
+                </div>
+            </div>
 
-    <div id="lista-filmes">
-        <p class="mensagem-inicial">Nenhum filme cadastrado ainda.</p>
-    </div>
+            <!-- Filme 2: Enrolados -->
+            <div class="filme" data-nome="enrolados">
+                <img src="https://m.media-amazon.com/images/I/81J3xSAAJzL._AC_UF894,1000_QL80_.jpg" alt="Enrolados">
+                <div class="filme-info">
+                    <h2>Enrolados</h2>
+                    <p>Rapunzel, uma jovem com cabelos mágicos, foge da torre e vive uma grande aventura com um ladrão encantador.</p>
+                    <a href="https://www.youtube.com/watch?v=2f516ZLyC6U" target="_blank">▶ Ver Trailer</a>
+                </div>
+            </div>
 
-<script>
-    // A CHAVE SECRETA DA API OMDb (Substitua esta string pela sua chave real)
-    const API_KEY = "dea7f304"; 
-    
-    // 1. ARMAZENAMENTO DE DADOS
-    /**
-     * Array global que irá guardar todos os filmes como objetos.
-     * Ex: [{titulo: 'Filme X', sinopse: 'Sinopse Y'}]
-     */
-    const catalogo = [];
+            <!-- Filme 3: Oppenheimer -->
+            <div class="filme" data-nome="oppenheimer">
+                <img src="https://m.media-amazon.com/images/I/71nqC3c8m+L._AC_UF894,1000_QL80_.jpg" alt="Oppenheimer">
+                <div class="filme-info">
+                    <h2>Oppenheimer</h2>
+                    <p>A história do físico J. Robert Oppenheimer e o desenvolvimento da bomba atômica durante a Segunda Guerra Mundial.</p>
+                    <a href="https://www.youtube.com/watch?v=uYPbbksJxIg" target="_blank">▶ Ver Trailer</a>
+                </div>
+            </div>
 
-    // 2. CAPTURA DE ELEMENTOS DO DOM
-    const form = document.getElementById('cadastro-filmes');
-    const listaFilmesContainer = document.getElementById('lista-filmes');
+            <!-- Filme 4: Barbie -->
+            <div class="filme" data-nome="barbie">
+                <img src="https://m.media-amazon.com/images/I/71FQm2eY-LL._AC_UF894,1000_QL80_.jpg" alt="Barbie">
+                <div class="filme-info">
+                    <h2>Barbie</h2>
+                    <p>Barbie embarca em uma jornada existencial ao deixar Barbieland e descobrir o que realmente significa ser humana.</p>
+                    <a href="https://www.youtube.com/watch?v=pBk4NYhWNMM" target="_blank">▶ Ver Trailer</a>
+                </div>
+            </div>
 
-    //----------------------
-    // FUNÇÃO DE REMOÇÃO
-    // ---------------------
-    /**
-     * Remove um filme do array de dados e do elemento HTML na tela.
-     * @param {number} indice - A posição do filme no array 'catalogo'.
-     * @param {HTMLElement} elementoDOM - O elemento <div> do filme a ser removido da tela.
-     */
-    function removerFilme(indice, elementoDOM) {
-        // A. REMOÇÃO DO ARRAY (Lógica)
-        // splice(indice, 1) remove 1 elemento a partir da posição 'indice'.
-        catalogo.splice(indice, 1);
+            <!-- Filme 5: Duna Parte Dois -->
+            <div class="filme" data-nome="duna parte dois">
+                <img src="https://m.media-amazon.com/images/I/81f+J2gIhGL._AC_UF894,1000_QL80_.jpg" alt="Duna: Parte Dois">
+                <div class="filme-info">
+                    <h2>Duna: Parte Dois</h2>
+                    <p>Paul Atreides une forças com os Fremen para vingar sua família e desafiar o império que os destruiu.</p>
+                    <a href="https://www.youtube.com/watch?v=U2Qp5pL3ovA" target="_blank">▶ Ver Trailer</a>
+                </div>
+            </div>
 
-        // B. REMOÇÃO DO DOM (Visual)
-        elementoDOM.remove();
+        </section>
+    </main>
 
-        // Opcional: atualiza a mensagem da lista se estiver vazia
-        if (catalogo.length === 0) {
-            listaFilmesContainer.innerHTML = '<p class="mensagem-inicial">Nenhum filme cadastrado ainda.</p>';
-        }
+    <!-- ==========================
+         RODAPÉ
+    =========================== -->
+    <footer>
+        <p>🎥 Desenvolvido com ❤️ por <strong>Ana Carla</strong> — 2025</p>
+    </footer>
 
-        console.log(`Filme removido. Catálogo atualizado:`, catalogo);
-        
-        // CORREÇÃO ESSENCIAL DE LÓGICA:
-        // A remoção de um elemento no meio do array (splice) muda os índices
-        // de todos os elementos seguintes. É necessário re-renderizar todos 
-        // os filmes após a remoção para que os índices dos botões "Remover"
-        // apontem para a posição correta no array `catalogo`.
-        // Para simplificar, vamos redesenhar a lista inteira.
-        reconstruirLista();
-    }
-    
-    //-----------------------------------------
-    // FUNÇÃO DE RECONSTRUÇÃO DA LISTA
-    //-----------------------------------------
-    /**
-     * Limpa o contêiner e redesenha todos os filmes a partir do array 'catalogo'.
-     * Isso garante que os índices (necessários para a remoção) estejam sempre corretos.
-     */
-     function reconstruirLista() {
-        if (catalogo.length === 0) {
-            listaFilmesContainer.innerHTML = '<p class="mensagem-inicial">Nenhum filme cadastrado ainda.</p>';
-            return;
-        }
+    <!-- ==========================
+         SCRIPT DE PESQUISA
+    =========================== -->
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const filmes = document.querySelectorAll('.filme');
 
-        // Limpa o contêiner antes de redesenhar
-        listaFilmesContainer.innerHTML = '';
-        
-        // Itera sobre o array e renderiza cada filme com seu novo índice
-        catalogo.forEach((filme, index) => {
-            renderizarFilme(filme, index);
+        searchInput.addEventListener('keyup', () => {
+            const termo = searchInput.value.toLowerCase();
+            filmes.forEach(filme => {
+                const nome = filme.getAttribute('data-nome');
+                filme.style.display = nome.includes(termo) ? 'block' : 'none';
+            });
         });
-    }
-
-
-    //-----------------------------------------
-    // FUNÇÃO DE RENDERIZAÇÃO
-    //-----------------------------------------
-    /**
-     * Cria e exibe a estrutura HTML de um filme na lista.
-     * @param {object} filme - O objeto {titulo, sinopse} do filme.
-     * @param {number} indice - O índice atual do filme no array 'catalogo'.
-     */
-    function renderizarFilme(filme, indice) {
-        // A. CRIAÇÃO DE ELEMENTOS HTML (document.createElement)
-
-        // Cria a <div> que será o contêiner de cada filme.
-        const filmeDiv = document.createElement('div');
-        filmeDiv.classList.add('filme-item'); 
-        filmeDiv.setAttribute('data-indice', indice); // Para rastreamento
-
-        // Cria o <h3> para o título e define seu texto.
-        const tituloH3 = document.createElement('h3');
-        tituloH3.textContent = filme.titulo;
-
-        // Cria o <p> para a sinopse
-        const sinopseP = document.createElement('p');
-        sinopseP.textContent = filme.sinopse;
-
-        // Cria o botão de remoção.
-        const removerBotao = document.createElement('button');
-        removerBotao.textContent = 'Remover';
-        removerBotao.classList.add('btn-remover');
-
-        // B. DEFINIÇÃO DO EVENTO DE REMOÇÃO (addEventListener)
-        // Anexa a função removerFilme ao clique do botão.
-        removerBotao.addEventListener('click', () => {
-            // Ao clicar, chamamos a função, passando o índice (posição) e a própria <div> (filmeDiv).
-            removerFilme(indice, filmeDiv);
-        });
-
-        // C. ANEXAR ELEMENTOS (appendChild)
-        // Monta a estrutura hierárquica: filmeDiv -> [tituloH3, sinopseP, removerBotao]
-        filmeDiv.appendChild(tituloH3);
-        filmeDiv.appendChild(sinopseP);
-        filmeDiv.appendChild(removerBotao);
-
-        // D. INSERÇÃO NO DOM FINAL
-        listaFilmesContainer.appendChild(filmeDiv);
-    }
-
-    // ------------------------------------------------
-    // FUNÇÃO PRINCIPAL DE ADIÇÃO (Manipular do Formulário)
-    //--------------------------------------------------
-    /** * Lida com envio do formulário, captura os dados e salva o filme.
-     * @param {Event} evento - O evento de 'submit' do formulário.
-     */
-    function adicionarFilme(evento) {
-        // 3. Previne o recarregamento da página
-        evento.preventDefault();
-
-        // 4. Captura os valores dos campos
-        const tituloInput = document.getElementById('titulo');
-        const sinopseInput = document.getElementById('sinopse');
-
-        // Cria o objeto JavaScript com os dados
-        const novoFilme = {
-            titulo: tituloInput.value,
-            sinopse: sinopseInput.value
-        }
-        
-        // 5. Armazena o filme no Array
-        catalogo.push(novoFilme);
-
-        // 6. Redesenha a Lista (chamando a função de reconstrução)
-        // Isso garante que a lista seja limpa e redesenhada com o novo filme
-        // e com os índices corretos para os botões "Remover".
-        reconstruirLista();
-
-        // 7. Limpa o formulário
-        form.reset();
-
-        console.log("Novo filme adicionado:", novoFilme);
-    }
-
-    // ESCUTANDO O EVENTO DO BOTÃO/FORMULÁRIO
-    // Anexamos a função 'adicionarFilme' ao evento de 'submit' do formulário
-    form.addEventListener('submit', adicionarFilme);
-    console.log("JavaScript Carregado. Pronto para iniciar o catálogo!");
-</script>
+    </script>
 
 </body>
 </html>
