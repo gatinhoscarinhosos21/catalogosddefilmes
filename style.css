@@ -1,7 +1,7 @@
-/* ======== ESTILO GERAL ======== */
+ /* ======== ESTILO GERAL ======== */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #0f0f0f; /* fundo escuro neutro */
+    background-color: #0f0f0f;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -53,19 +53,20 @@ h1 {
 .catalogo {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Alinha à esquerda */
-    gap: 20px;
-    padding: 40px;
+    justify-content: flex-start; /* 👉 Alinha todos os filmes à esquerda */
+    align-items: flex-start;
+    gap: 25px;
+    padding: 40px 60px;
 }
 
 /* ======== FILMES ======== */
 .filme {
     background-color: #1a1a1a;
     border-radius: 10px;
-    width: 250px;
-    text-align: center;
+    width: 270px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* 👉 Alinha o texto dentro do card à esquerda */
 }
 
 .filme:hover {
@@ -76,7 +77,7 @@ h1 {
 .filme img {
     width: 100%;
     border-radius: 10px 10px 0 0;
-    height: 370px;
+    height: 380px;
     object-fit: cover;
 }
 
@@ -87,14 +88,17 @@ h1 {
 .filme h2 {
     font-family: 'Great Vibes', cursive;
     color: #ffcc70;
-    font-size: 1.8em;
-    margin: 10px 0;
+    font-size: 1.9em;
+    margin: 5px 0 10px;
+    text-align: left; /* 👉 título alinhado à esquerda */
 }
 
 .filme p {
     color: #ccc;
     font-size: 0.95em;
     margin-bottom: 15px;
+    line-height: 1.4em;
+    text-align: left; /* 👉 texto alinhado à esquerda */
 }
 
 .filme a {
@@ -121,4 +125,20 @@ footer {
     color: #777;
     border-top: 1px solid #333;
     font-size: 0.9em;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+    .catalogo {
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .filme {
+        width: 90%;
+    }
+
+    .search-bar input {
+        width: 85%;
+    }
 }
