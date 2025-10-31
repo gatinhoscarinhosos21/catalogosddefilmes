@@ -1,144 +1,121 @@
- /* ======== ESTILO GERAL ======== */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #0f0f0f;
-    color: #fff;
-    margin: 0;
-    padding: 0;
+ body { 
+    font-family: Arial, sans-serif; 
+    padding: 20px; 
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f4f4f4; 
 }
-
-/* ======== CABEÇALHO ======== */
-header {
-    text-align: center;
-    padding: 40px 10px;
-    background-color: #1a1a1a;
-    border-bottom: 2px solid #333;
+h1, h2 {
+    color: #333;
 }
-
-h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3.5em;
-    color: #ffcc70;
-    margin-bottom: 10px;
-}
-
-.subtitulo {
-    color: #bbb;
-    font-size: 1.1em;
-    margin-bottom: 25px;
-}
-
-/* ======== BARRA DE PESQUISA ======== */
-.search-bar {
-    text-align: center;
-}
-
-.search-bar input {
-    width: 60%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-    background-color: #222;
-    color: #fff;
-    outline: none;
-    transition: 0.3s;
-}
-
-.search-bar input:focus {
-    box-shadow: 0 0 10px #ffcc70;
-}
-
-/* ======== CATÁLOGO ======== */
-.catalogo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; /* 👉 Alinha todos os filmes à esquerda */
-    align-items: flex-start;
-    gap: 25px;
-    padding: 40px 60px;
-}
-
-/* ======== FILMES ======== */
-.filme {
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    width: 270px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left; /* 👉 Alinha o texto dentro do card à esquerda */
-}
-
-.filme:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 204, 112, 0.3);
-}
-
-.filme img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-    height: 380px;
-    object-fit: cover;
-}
-
-.filme-info {
-    padding: 15px;
-}
-
-.filme h2 {
-    font-family: 'Great Vibes', cursive;
-    color: #ffcc70;
-    font-size: 1.9em;
-    margin: 5px 0 10px;
-    text-align: left; /* 👉 título alinhado à esquerda */
-}
-
-.filme p {
-    color: #ccc;
-    font-size: 0.95em;
-    margin-bottom: 15px;
-    line-height: 1.4em;
-    text-align: left; /* 👉 texto alinhado à esquerda */
-}
-
-.filme a {
-    display: inline-block;
-    color: #ffcc70;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px;
-    border: 1px solid #ffcc70;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.filme a:hover {
-    background-color: #ffcc70;
-    color: #111;
-}
-
-/* ======== RODAPÉ ======== */
-footer {
-    background-color: #111;
-    text-align: center;
+form {
+    background: #fff; 
     padding: 20px;
-    color: #777;
-    border-top: 1px solid #333;
-    font-size: 0.9em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"] { 
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
 }
 
-/* ======== RESPONSIVIDADE ======== */
-@media (max-width: 768px) {
-    .catalogo {
-        padding: 20px;
-        justify-content: center;
-    }
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s; 
+}
+button:hover {
+    background-color: #0056b3;
+}
 
-    .filme {
-        width: 90%;
-    }
+/* ------------------------------------------------------------- */
+/* ESTILOS PARA A LISTA DE FILMES COM PÔSTER (Flexbox) */
+/* ------------------------------------------------------------- */
 
-    .search-bar input {
-        width: 85%;
-    }
+/* Contêiner do Filme: Organiza imagem e texto */
+.filme-item { 
+    display: flex; /* Habilita o alinhamento lado a lado */
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    
+    border: 1px solid #ddd; 
+    padding: 15px; 
+    margin-bottom: 20px; 
+    border-radius: 8px; 
+    background-color: #fff; 
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1); 
+}
+
+/* Estilo do Pôster */
+.filme-poster {
+    width: 100px; 
+    height: 150px; 
+    object-fit: cover; 
+    margin-right: 15px; /* Espaço entre o pôster e o texto */
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Estilo do Bloco de Informações */
+.filme-info {
+    flex-grow: 1; /* Ocupa o espaço restante */
+}
+
+.filme-info h3 { 
+    margin-top: 0; 
+    color: #007bff;
+    font-size: 1.2em;
+}
+
+.filme-info p {
+    font-style: normal; 
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* NOVO: Estilo para o Link/Botão do Trailer */
+.btn-trailer {
+    display: inline-block; 
+    padding: 8px 12px;
+    margin-right: 10px; 
+    margin-bottom: 10px;
+    background-color: #ff0000; /* Cor do YouTube */
+    color: white !important; /* Força a cor branca no texto do link */
+    text-decoration: none; 
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s; 
+    font-size: 0.8em; 
+}
+
+.btn-trailer:hover {
+    background-color: #cc0000;
+}
+
+
+/* Botão Remover */
+.filme-item .btn-remover {
+    background-color: #dc3545;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    /* Alinha com o botão de trailer se necessário */
+    margin-bottom: 10px; 
+}
+.filme-item .btn-remover:hover {
+    background-color: #c82333;
 }
