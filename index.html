@@ -3,214 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎬 Catálogo de Filmes</title>
-
-    <!-- Fonte cursiva -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
-    <!-- CSS externo -->
+    <title>Catálogo de Filmes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>🎞️ Catálogo de Filmes</h1>
-        <p class="subtitulo">Descubra histórias emocionantes que marcaram o cinema e encantaram o mundo!</p>
-
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="🔍 Pesquise um filme...">
-            <button id="addMovieBtn">Adicionar Filmes</button>
+    <h1>Catálogo de Filmes</h1>
+    
+    <form id="cadastro-filme">
+        <h2>Adicionar Novo Filme (Busca por API)</h2>
+        <div>
+            <label for="titulo">Título do Filme:</label>
+            <input type="text" id="titulo" required>
         </div>
-    </header>
+        <button type="submit">Buscar e Adicionar Filme</button>
+    </form>
 
-    <main>
-        <section class="catalogo" id="catalogo">
+    <hr>
 
-            <!-- 🎵 La La Land -->
-            <div class="filme" data-nome="la la land">
-                <img src="https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg" alt="La La Land">
-                <div class="filme-info">
-                    <h2>La La Land</h2>
-                    <p>
-                        Em meio ao brilho de Los Angeles, o pianista de jazz Sebastian e a sonhadora atriz Mia se apaixonam enquanto buscam alcançar seus sonhos.
-                        Unidos pela paixão pela arte, eles se inspiram e se desafiam mutuamente a perseguir suas ambições.
-                        No entanto, conforme suas carreiras tomam rumos diferentes, o casal precisa escolher entre o amor e o sucesso.
-                        “La La Land” é um musical vibrante e nostálgico que celebra os sonhos, o sacrifício e a beleza melancólica das escolhas que moldam nossas vidas.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=0pdqf4P9MB8" target="_blank">▶ Ver Trailer</a>
-                </div>
-            </div>
+    <h2>Minha Lista de Filmes</h2>
+    <div id="lista-filmes">
+        <p>Nenhum filme cadastrado ainda.</p>
+    </div>
 
-            <!-- 🌸 Enrolados -->
-            <div class="filme" data-nome="enrolados">
-                <img src="https://image.tmdb.org/t/p/w500/ym7Kst6a4uodryxqbGOxmewF235.jpg" alt="Enrolados">
-                <div class="filme-info">
-                    <h2>Enrolados</h2>
-                    <p>
-                        Rapunzel é uma jovem de espírito livre que passou toda a vida trancada em uma torre, sonhando em ver o mundo lá fora.
-                        Quando o charmoso ladrão Flynn Rider invade seu refúgio, ela aproveita a chance de embarcar em uma jornada mágica.
-                        Juntos, eles enfrentam perigos, descobrem novos sentimentos e aprendem sobre coragem, amizade e a importância da liberdade.
-                        “Enrolados” é uma aventura encantadora, cheia de humor, emoção e uma mensagem poderosa sobre descobrir quem você realmente é.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=2f516ZLyC6U" target="_blank">▶ Ver Trailer</a>
-                </div>
-            </div>
-
-            <!-- 💣 Oppenheimer -->
-            <div class="filme" data-nome="oppenheimer">
-                <img src="https://image.tmdb.org/t/p/w500/baf9yw4mnNKV2UnZb93dhR2Vj6P.jpg" alt="Oppenheimer">
-                <div class="filme-info">
-                    <h2>Oppenheimer</h2>
-                    <p>
-                        Dirigido por Christopher Nolan, “Oppenheimer” mergulha profundamente na mente de J. Robert Oppenheimer, o físico responsável pela criação da bomba atômica.
-                        Entre a genialidade científica e o fardo moral de suas descobertas, Oppenheimer enfrenta dilemas éticos e as consequências devastadoras de suas ações.
-                        A narrativa combina drama, tensão e reflexões sobre poder, ciência e responsabilidade, retratando o nascimento de uma nova era — a era da destruição em massa.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=uYPbbksJxIg" target="_blank">▶ Ver Trailer</a>
-                </div>
-            </div>
-
-            <!-- 💗 Barbie -->
-            <div class="filme" data-nome="barbie">
-                <img src="https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg" alt="Barbie">
-                <div class="filme-info">
-                    <h2>Barbie</h2>
-                    <p>
-                        Em Barbieland, tudo é cor-de-rosa e perfeito — até que Barbie começa a questionar sua própria existência.
-                        Em busca de respostas, ela viaja para o mundo real e se depara com a complexidade da vida humana, a desigualdade e o significado de ser “de verdade”.
-                        “Barbie” é uma sátira inteligente e emocional sobre identidade, feminilidade e liberdade.
-                        Um filme que mistura humor, crítica social e empatia, mostrando que ser perfeita não é o mesmo que ser feliz.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=pBk4NYhWNMM" target="_blank">▶ Ver Trailer</a>
-                </div>
-            </div>
-
-            <!-- 🌌 Duna Parte Dois -->
-            <div class="filme" data-nome="duna parte dois">
-                <img src="https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg" alt="Duna Parte Dois">
-                <div class="filme-info">
-                    <h2>Duna: Parte Dois</h2>
-                    <p>
-                        Após a destruição de sua casa e a perda de seu pai, Paul Atreides se une ao povo Fremen para buscar vingança contra os que traíram sua família.
-                        Enquanto tenta compreender seu destino como o Messias profetizado, Paul enfrenta dilemas entre o amor, o poder e a fé.
-                        Em meio a guerras épicas e visões místicas, ele precisa decidir se seguirá o caminho da redenção ou da destruição.
-                        “Duna: Parte Dois” é uma odisseia visual impressionante, que combina política, espiritualidade e destino em uma narrativa grandiosa.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=U2Qp5pL3ovA" target="_blank">▶ Ver Trailer</a>
-                </div>
-            </div>
-
-            <!-- 🪐 Interestelar -->
-            <div class="filme" data-nome="interestelar">
-                <img src="https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg" alt="Interestelar">
-                <div class="filme-info">
-                    <h2>Interestelar</h2>
-                    <p>
-                        Em um futuro onde a Terra está morrendo, um grupo de astronautas embarca em uma missão para encontrar um novo lar para a humanidade.
-                        Cooper, um ex-piloto e pai dedicado, deve escolher entre salvar o futuro da espécie humana ou permanecer ao lado de sua filha.
-                        “Interestelar” é uma experiência cinematográfica arrebatadora sobre o tempo, o amor e os limites da ciência.
-                        Dirigido por Christopher Nolan, o filme desafia a lógica e emociona com uma das histórias mais tocantes da ficção científica moderna.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=zSWdZVtXT7E" target="_blank">▶ Ver Trailer</a>
-                </div>
-            </div>
-
-            <!-- 🦁 O Rei Leão -->
-            <div class="filme" data-nome="o rei leão">
-                <img src="https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg" alt="O Rei Leão">
-                <div class="filme-info">
-                    <h2>O Rei Leão</h2>
-                    <p>
-                        Após a trágica morte de seu pai, o jovem leão Simba foge de casa e tenta esquecer seu passado.
-                        Com a ajuda de novos amigos, ele cresce e aprende que não pode fugir de quem é.
-                        Quando o mal ameaça seu reino, Simba deve enfrentar seus medos e reivindicar o trono.
-                        “O Rei Leão” é uma história atemporal sobre coragem, responsabilidade e o ciclo da vida, acompanhada por uma das trilhas sonoras mais marcantes do cinema.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=7TavVZMewpY" target="_blank">▶ Ver Trailer</a>
-                </div>
-            </div>
-
-            <!-- 🕸️ Homem-Aranha: Através do Aranhaverso -->
-            <div class="filme" data-nome="homem aranha atraves do aranhaverso">
-                <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Homem-Aranha: Através do Aranhaverso">
-                <div class="filme-info">
-                    <h2>Homem-Aranha: Através do Aranhaverso</h2>
-                    <p>
-                        Miles Morales retorna em uma nova aventura multiversal, onde descobre um vasto universo de versões do Homem-Aranha.
-                        Ao lado de Gwen Stacy, ele enfrenta desafios que testam seus valores e seu senso de heroísmo.
-                        À medida que as realidades se cruzam, Miles precisa provar que qualquer um pode usar a máscara — desde que tenha coragem.
-                        Visualmente deslumbrante e emocionalmente intenso, este capítulo redefine o que é ser um herói.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=shW9i6k8cB0" target="_blank">▶ Ver Trailer</a>
-                </div>
-            </div>
-
-            <!-- 💭 Divertida Mente 2 -->
-            <div class="filme" data-nome="divertida mente 2">
-                <img src="https://image.tmdb.org/t/p/w500/wYzKwqQvRjY9AqZltjLrTqVxk1J.jpg" alt="Divertida Mente 2">
-                <div class="filme-info">
-                    <h2>Divertida Mente 2</h2>
-                    <p>
-                        Riley agora é uma adolescente, e com a chegada da puberdade, novas emoções começam a surgir — entre elas, Ansiedade, Vergonha e Inveja.
-                        Alegria, Tristeza e as demais emoções precisam aprender a conviver com essas novas companheiras enquanto Riley enfrenta os desafios do amadurecimento.
-                        “Divertida Mente 2” é uma jornada sensível, divertida e profundamente humana sobre crescer e entender nossos sentimentos.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=LEjhY15eCx0" target="_blank">▶ Ver Trailer</a>
-                </div>
-            </div>
-
-        </section>
-    </main>
-
-    <footer>
-        <p>🎥 Desenvolvido com ❤️ por <strong>aninha</strong> — 2025</p>
-    </footer>
-
-    <!-- ======= JavaScript ======= -->
     <script>
-        const searchInput = document.getElementById('searchInput');
-        const filmes = document.querySelectorAll('.filme');
-        const addMovieBtn = document.getElementById('addMovieBtn');
-        const catalogo = document.getElementById('catalogo');
+        // Use sua chave da OMDB API aqui
+        const API_KEY = '72dcf75a'; 
+        let catalogo = JSON.parse(localStorage.getItem('catalogo')) || [];
 
-        // 🔍 Pesquisa
-        searchInput.addEventListener('keyup', () => {
-            const termo = searchInput.value.toLowerCase();
-            filmes.forEach(filme => {
-                const nome = filme.getAttribute('data-nome');
-                filme.style.display = nome.includes(termo) ? 'flex' : 'none';
-            });
-        });
+        const form = document.getElementById('cadastro-filme');
+        const tituloInput = document.getElementById('titulo');
+        const listaFilmesContainer = document.getElementById('lista-filmes');
 
-        // ➕ Adicionar filme dinamicamente
-        addMovieBtn.addEventListener('click', () => {
-            const titulo = prompt("Digite o título do filme:");
-            if (!titulo) return;
+        // Salva no localStorage
+        function salvarCatalogo() {
+            localStorage.setItem('catalogo', JSON.stringify(catalogo));
+        }
 
-            const sinopse = prompt("Digite a sinopse do filme:");
-            if (!sinopse) return;
+        function removerFilme(indice, elementoDOM) {
+            catalogo.splice(indice, 1);
+            salvarCatalogo();
+            elementoDOM.remove();
+            if (catalogo.length === 0) {
+                listaFilmesContainer.innerHTML = '<p>Nenhum filme cadastrado ainda.</p>';
+            }
+        }
 
-            const imagem = prompt("Cole o link da imagem do filme:");
-            if (!imagem) return;
-
-            const trailer = prompt("Cole o link do trailer do filme (YouTube):");
-            if (!trailer) return;
+        function renderizarFilme(filme, indice) {
+            // Se for o primeiro item a ser adicionado, limpa a mensagem "Nenhum filme cadastrado"
+            if (catalogo.length === 1 && listaFilmesContainer.querySelector('p')) {
+                 listaFilmesContainer.innerHTML = '';
+            }
 
             const filmeDiv = document.createElement('div');
-            filmeDiv.classList.add('filme');
-            filmeDiv.setAttribute('data-nome', titulo.toLowerCase());
+            filmeDiv.classList.add('filme-item');
 
-            filmeDiv.innerHTML = `
-                <img src="${imagem}" alt="${titulo}">
-                <div class="filme-info">
-                    <h2>${titulo}</h2>
-                    <p>${sinopse}</p>
-                    <a href="${trailer}" target="_blank">▶ Ver Trailer</a>
-                </div>
-            `;
+            const imagemPoster = document.createElement('img');
+            imagemPoster.src = filme.poster && filme.poster !== 'N/A'
+                ? filme.poster
+                : 'https://via.placeholder.com/100x150?text=Poster+Nao+Disponivel';
+            imagemPoster.alt = `Pôster do filme ${filme.titulo}`;
+            imagemPoster.classList.add('filme-poster');
 
-            catalogo.appendChild(filmeDiv);
-        });
+            const infoDiv = document.createElement('div');
+            infoDiv.classList.add('filme-info');
+
+            const tituloH3 = document.createElement('h3');
+            tituloH3.textContent = filme.titulo;
+
+            const sinopseP = document.createElement('p');
+            sinopseP.textContent = filme.sinopse || 'Sinopse não disponível.';
+
+            // NOVO: Link para o Trailer no YouTube
+            const trailerLink = document.createElement('a');
+            const termoBusca = encodeURIComponent(`${filme.titulo} trailer oficial`);
+            trailerLink.href = `https://www.youtube.com/results?search_query=${termoBusca}`;
+            trailerLink.target = '_blank';
+            trailerLink.textContent = '▶️ Ver Trailer (YouTube)';
+            trailerLink.classList.add('btn-trailer'); 
+
+            const removerBotao = document.createElement('button');
+            removerBotao.textContent = 'Remover';
+            removerBotao.classList.add('btn-remover');
+
+            removerBotao.addEventListener('click', () => {
+                // Usa findIndex para encontrar o item correto, evitando problemas de ordenação
+                const indiceAtual = catalogo.findIndex(f => f.titulo === filme.titulo); 
+                if (indiceAtual > -1) removerFilme(indiceAtual, filmeDiv);
+            });
+
+            infoDiv.appendChild(tituloH3);
+            infoDiv.appendChild(sinopseP);
+            infoDiv.appendChild(trailerLink); // Adiciona o link do trailer
+            infoDiv.appendChild(removerBotao);
+
+            filmeDiv.appendChild(imagemPoster);
+            filmeDiv.appendChild(infoDiv);
+
+            listaFilmesContainer.appendChild(filmeDiv);
+        }
+
+        async function adicionarFilme(evento) {
+            evento.preventDefault();
+            const titulo = tituloInput.value.trim();
+            if (!titulo) return;
+
+            // Busca na OMDB API
+            const url = `https://www.omdbapi.com/?apikey=${API_KEY}&t=${encodeURIComponent(titulo)}&lang=pt`;
+
+            try {
+                const resposta = await fetch(url);
+                const dadosDoFilme = await resposta.json();
+
+                if (dadosDoFilme.Response === "True") {
+                    // Verifica se o filme já existe (opcional, mas bom para evitar duplicatas)
+                    if (catalogo.some(f => f.titulo === dadosDoFilme.Title)) {
+                         alert(`O filme "${dadosDoFilme.Title}" já está no seu catálogo.`);
+                         form.reset();
+                         return;
+                    }
+
+                    const novoFilme = {
+                        titulo: dadosDoFilme.Title,
+                        sinopse: dadosDoFilme.Plot,
+                        poster: dadosDoFilme.Poster
+                    };
+
+                    catalogo.push(novoFilme);
+                    salvarCatalogo();
+                    renderizarFilme(novoFilme, catalogo.length - 1);
+                } else {
+                    alert(`Filme não encontrado: "${titulo}". Verifique o nome.`);
+                }
+            } catch (erro) {
+                alert('Erro ao buscar o filme na API. Verifique sua conexão ou chave de API.');
+                console.error('Erro:', erro);
+            }
+
+            form.reset();
+        }
+
+        // Recarregar lista ao abrir a página
+        function carregarCatalogo() {
+            if (catalogo.length > 0) {
+                listaFilmesContainer.innerHTML = '';
+                catalogo.forEach((filme, i) => renderizarFilme(filme, i));
+            }
+        }
+
+        form.addEventListener('submit', adicionarFilme);
+        carregarCatalogo();
     </script>
 
 </body>
